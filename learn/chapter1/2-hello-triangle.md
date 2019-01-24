@@ -25,7 +25,7 @@ That may seem like a lot, but it's quite intuitive once setup is complete and we
 
 ## Some new functions
 
-We'll need to overload a couple of extra functions to get started. Firstly, we overload OnLoad.
+We'll need to overload a couple of extra functions to get started. Firstly, we overload OnLoad. To get this code working however we'll need to be ```using OpenTK.Graphics.OpenGL4;``` to access the Open GL functions. (You can ```using OpenTK.Graphics.OpenGL;``` to access the depricated functions, however it's recommended to stick with OpenGL4. OpenGL4 functions are moderately backwards compatible-but always faster & easier.)
 
 ```cs
 protected override void OnLoad(EventArgs e)
