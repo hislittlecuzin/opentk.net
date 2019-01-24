@@ -80,6 +80,8 @@ protected override void OnUpdateFrame(FrameEventArgs e)
 
 It's really simple to detect key presses! OpenTK has a class called `KeyboardState` with an `IsKeyDown` method, which returns `true` if a key is pressed. For example, `KeyboardState.IsKeyDown(Key.Escape)` will only return `true` if the escape (`Esc`) key is pressed.
 
+However we're going to need to include the Input API by typing ```using OpenTK.Input;``` at the top of the document. 
+
 We want to exit when the escape key is pressed, and with the above information is in mind, exiting when the escape key is pressed is as easy at this:
 
 ```cs
