@@ -167,7 +167,7 @@ void main()
 }
 ```
 
-Save this as `shader.vert`.
+Save this as `shader.vert`. You can write this in any text editor & save it wherever you'd like. Just remember the file path for later. That's how the program will find it. Your OpenGL program will compile it at runtime. 
 
 As you can see, GLSL looks similar to C. Each shader begins with a declaration of its version. Since OpenGL 3.3 and higher the version numbers of GLSL match the version of OpenGL (GLSL version 420 corresponds to OpenGL version 4.2 for example). We also explicitly mention we're using core profile functionality.
 
