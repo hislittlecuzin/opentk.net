@@ -30,7 +30,7 @@ The indices array will be fed to our EBO to specify which vertices will be used 
 
 Next, as a property, add the line `int ElementBufferObject` below where you added the VertexBufferObject.
 
-Now, in OnLoad, below where you initialize the VertexBufferObject, we initialize the ElementBufferObject in much the same way:
+Now, in OnLoad, below where you initialize the VertexBufferObject, VertexArrayObject & VertexAttributeArray we initialize the ElementBufferObject in much the same way:
 
 ```cs
 ElementBufferObject = GL.GenBuffer();
@@ -38,6 +38,7 @@ GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
 GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
 ```
 
+You must do it last because the VAO will automatically rebind with the EBO afterwards. If you don't, it won't know to look for it. 
 It's almost exactly the same as how you use the VBO!
 
 The EBO is now ready to go. Down in OnRenderFrame, replace the call to `DrawArrays` with the following:
